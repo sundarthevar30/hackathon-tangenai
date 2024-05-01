@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Transaction Management</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+    <script type="module">
+        import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
+        Chatbot.init({
+            chatflowid: "6caf031c-e42d-458e-95eb-ad58f2ae73cc",
+            apiHost: "http://localhost:3000",
+        })
+    </script>
+    
+
+
+    
+
+    </head>
+    <body>
+        <header>
+            <h1> Vanguard Transaction Management Application</h1>
+        </header>
+        <div>
+
+            <fieldset>
+              <form action="/" method="post">
+                <input name="transactionID" type="text" class="ghost-input" placeholder="Transaction Number" required>
+                <input type="submit" class="button" id="toggleButton" value="Client Info">
+              </form>
+            </fieldset>
+          </div>
+          <div id="trans-info" class="client-info">
+            <h1>Transaction Information</h1>
+            <ul>
+                <li><strong>Transaction Type:</strong> Equity/Secondary</li>
+                <li><strong>Transaction Number:</strong> 1234567890</li>
+                <li><strong>Transaction Amount:</strong> $500,000.00</li>
+            </ul>
+        </div>
+
+        <script>
+            const button = document.getElementById('toggleButton');
+            const content = document.getElementById('trans-info');
+        
+            button.addEventListener('click', function() {
+                if (content.style.display === 'none') {
+                    content.style.display = 'block';
+                } else {
+                    content.style.display = 'none';
+                }
+            });
+        </script>
+    </body>
+    <footer> <p>&copy;All rights reserved.</p></footer>
+    
+</html>

@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Investment Advisory Services</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+    <script type="module">
+        import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
+        Chatbot.init({
+            chatflowid: "6caf031c-e42d-458e-95eb-ad58f2ae73cc",
+            apiHost: "http://localhost:3000",
+        })
+    </script>
+    
+
+
+    
+
+    </head>
+    <body>
+        <header>
+            <h1>  Investment Advisory Portal</h1>
+        </header>
+        <div>
+
+            <fieldset>
+              <form action="/" method="post">
+                <input name="transactionID" type="text" class="ghost-input" placeholder="Advice Record" required>
+                <input type="submit" class="button" id="toggleButton3" value="Client Info">
+              </form>
+            </fieldset>
+          </div>
+          <div id="advice-info" class="client-info">
+            <h1>Advisory Information</h1>
+            <ul>
+                <li><strong>Advice Type:</strong> Personal Advice</li>
+                <li><strong>Advice Record Number:</strong> 1234567890</li>
+                <li><strong>Advice Client AUM:</strong>$50,000,000 </li>
+            </ul>
+        </div>
+
+        <script>
+            const button = document.getElementById('toggleButton3');
+            const content = document.getElementById('advice-info');
+        
+            button.addEventListener('click', function() {
+                if (content.style.display === 'none') {
+                    content.style.display = 'block';
+                } else {
+                    content.style.display = 'none';
+                }
+            });
+        </script>
+    </body>
+    <footer> <p>&copy;All rights reserved.</p></footer>
+    
+</html>
